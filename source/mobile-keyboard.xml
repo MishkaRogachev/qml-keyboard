@@ -1,54 +1,49 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Keyboard
-    defaultKeyWidth="50"
-    defaultKeyHeight="50"
-    horizontalGap="2px"
-    verticalGap="2px">
-
-    <Mode id="eng">
+<Keyboard>
+    <Mode id="us">
         <Row>
-            <Key labels = "q|1"/>
-            <Key labels = "w|2"/>
-            <Key labels = "e|3"/>
-            <Key labels = "r|4"/>
-            <Key labels = "t|5"/>
-            <Key labels = "y|6"/>
-            <Key labels = "u|7"/>
-            <Key labels = "i|8"/>
-            <Key labels = "o|9"/>
-            <Key labels = "p|0"/>
+            <Key labels = "q|1" ratio = "1" icon = ""/>
+            <Key labels = "w|2" ratio = "1" icon = ""/>
+            <Key labels = "e|3" ratio = "1" icon = ""/>
+            <Key labels = "r|4" ratio = "1" icon = ""/>
+            <Key labels = "t|5" ratio = "1" icon = ""/>
+            <Key labels = "y|6" ratio = "1" icon = ""/>
+            <Key labels = "u|7" ratio = "1" icon = ""/>
+            <Key labels = "i|8" ratio = "1" icon = ""/>
+            <Key labels = "o|9" ratio = "1" icon = ""/>
+            <Key labels = "p|0" ratio = "1" icon = ""/>
         </Row>
         <Row>
-            <Key labels = "a"/>
-            <Key labels = "s"/>
-            <Key labels = "d"/>
-            <Key labels = "f"/>
-            <Key labels = "g"/>
-            <Key labels = "h"/>
-            <Key labels = "j"/>
-            <Key labels = "k"/>
-            <Key labels = "l"/>
+            <Key labels = "a" ratio = "1" icon = ""/>
+            <Key labels = "s" ratio = "1" icon = ""/>
+            <Key labels = "d" ratio = "1" icon = ""/>
+            <Key labels = "f" ratio = "1" icon = ""/>
+            <Key labels = "g" ratio = "1" icon = ""/>
+            <Key labels = "h" ratio = "1" icon = ""/>
+            <Key labels = "j" ratio = "1" icon = ""/>
+            <Key labels = "k" ratio = "1" icon = ""/>
+            <Key labels = "l" ratio = "1" icon = ""/>
         </Row>
         <Row>
-            <Key labels = "!shift"/>
-            <Key labels = "z"/>
-            <Key labels = "x"/>
-            <Key labels = "c"/>
-            <Key labels = "v"/>
-            <Key labels = "b"/>
-            <Key labels = "n"/>
-            <Key labels = "m"/>
-            <Key labels = "!backspace"/>
+            <Key labels = "!shift" ratio = "1.5" icon = "shift.svg"/>
+            <Key labels = "z" ratio = "1" icon = ""/>
+            <Key labels = "x" ratio = "1" icon = ""/>
+            <Key labels = "c" ratio = "1" icon = ""/>
+            <Key labels = "v" ratio = "1" icon = ""/>
+            <Key labels = "b" ratio = "1" icon = ""/>
+            <Key labels = "n" ratio = "1" icon = ""/>
+            <Key labels = "m" ratio = "1" icon = ""/>
+            <Key labels = "!backspace" ratio = "1.5" icon = "backspace.svg"/>
         </Row>
         <Row>
-            <Key labels = "!num"/>
-            <Key labels = "!lang"/>
-            <Key labels = "!space"/>
-            <Key labels = ".|,!?:;@"/>
-            <Key labels = "!enter"/>
+            <Key labels = "123!num" ratio = "1.5" icon = ""/>
+            <Key labels = "Us!lang" ratio = "1" icon = ""/>
+            <Key labels = "!space" ratio = "5" icon = ""/>
+            <Key labels = ".|,!?:;@" ratio = "1" icon = ""/>
+            <Key labels = "!enter" ratio = "1.5" icon = "enter.png"/>
         </Row>
     </Mode>
-    <Mode id="rus">
+    <Mode id="ru">
 
     </Mode>
     <Mode id="num">

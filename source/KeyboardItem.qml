@@ -6,48 +6,40 @@ Item {
 
     property string source: ""
     property string mode: ""
+    property int keyWidth: 50
+    property int keyHeight: 50
 
     Column {
         id: column
         anchors.centerIn: parent
-        spacing: 2
 
         Repeater {
             id: rowRepeater
             model: XmlListModel {
                 source: root.source
-                query: "/Keyboard/" +
-                       mode +
-                       "/Row"
+                query: "/Keyboard/" + mode + "/Row"
             }
 
             Row {
                 id: keyRow
-                spacing: 2
                 anchors.horizontalCenter: parent.horizontalCenter
 
                 Repeater {
                     id: keyRepeater
                     model: XmlListModel {
                         source: root.source
-                        query: "/Keyboard/" +
-                               mode +
-                               "/Row[" +
-                               (index + 1) +
-                               "]/Key"
+                        query: "/Keyboard/" + mode + "/Row[" +
+                               (index + 1) + "]/Key"
 
                         XmlRole { name: "labels"; query: "@labels/string()" }
+                        XmlRole { name: "ratio"; query: "@ratio/number()" }
+                        XmlRole { name: "icon"; query: "@icon/string()" }
                     }
 
-                    Rectangle {
-                        width: 50
-                        height: 50
-
-                        Text {
-                            anchors.centerIn: parent
-                            text: labels[0]
-                            font.pixelSize: 35
-                        }
+                    Key {
+                        width: keyWidth * ratio
+                        height: keyHeight
+                        text: labels.split(/[!|]+/)[0].toString();
                     }
                 }
             }
