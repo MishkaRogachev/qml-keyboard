@@ -4,6 +4,8 @@ Item {
     id: root
 
     property alias text: textItem.text
+    property alias font: textItem.font
+    property alias iconSource: icon.source
 
     Rectangle {
         id: background
@@ -12,9 +14,17 @@ Item {
         anchors.margins: 2
     }
 
-    Text {
-        id: textItem
+    Row {
         anchors.centerIn: parent
-        font.pixelSize: 35
+
+        Image {
+            id: icon
+            anchors.verticalCenter: parent.verticalCenter
+        }
+
+        Text {
+            id: textItem
+            anchors.verticalCenter: parent.verticalCenter
+        }
     }
 }

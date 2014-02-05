@@ -8,10 +8,21 @@ Rectangle {
     property string currentMode: ""
     property int keyWidth: 75
     property int keyHeight: 100
+    property alias font: proxyTextItem.font
 
     color: "#2C3E50"
     width: 1024
     height: 640
+
+    Text {
+        id: proxyTextItem
+        color: "#4D4D4D"
+        font.pointSize: 36
+        font.weight: Font.Light
+        font.family: "Roboto"
+        verticalAlignment: Text.AlignVCenter
+        horizontalAlignment: Text.AlignHCenter
+    }
 
     Repeater {
         id: keyboardModeRepeater
@@ -31,6 +42,7 @@ Rectangle {
             visible: mode === currentMode
             keyWidth: root.keyWidth
             keyHeight: root.keyHeight
+            font: proxyTextItem.font
         }
     }
 }

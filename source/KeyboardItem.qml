@@ -8,6 +8,9 @@ Item {
     property string mode: ""
     property int keyWidth: 50
     property int keyHeight: 50
+    property alias font: proxyTextItem.font
+
+    Text { id: proxyTextItem }
 
     Column {
         id: column
@@ -40,6 +43,8 @@ Item {
                         width: keyWidth * ratio
                         height: keyHeight
                         text: labels.split(/[!|]+/)[0].toString();
+                        font: proxyTextItem.font
+                        iconSource: icon
                     }
                 }
             }

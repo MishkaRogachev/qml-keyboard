@@ -25,7 +25,7 @@
             <Key labels = "l" ratio = "1" icon = ""/>
         </Row>
         <Row>
-            <Key labels = "!shift" ratio = "1.5" icon = "shift.svg"/>
+            <Key labels = "⇑!shift" ratio = "1.5" icon = ""/>
             <Key labels = "z" ratio = "1" icon = ""/>
             <Key labels = "x" ratio = "1" icon = ""/>
             <Key labels = "c" ratio = "1" icon = ""/>
@@ -33,14 +33,14 @@
             <Key labels = "b" ratio = "1" icon = ""/>
             <Key labels = "n" ratio = "1" icon = ""/>
             <Key labels = "m" ratio = "1" icon = ""/>
-            <Key labels = "!backspace" ratio = "1.5" icon = "backspace.svg"/>
+            <Key labels = "⌫!backspace" ratio = "1.5" icon = ""/>
         </Row>
         <Row>
             <Key labels = "123!num" ratio = "1.5" icon = ""/>
             <Key labels = "Us!lang" ratio = "1" icon = ""/>
             <Key labels = "!space" ratio = "5" icon = ""/>
             <Key labels = ".|,!?:;@" ratio = "1" icon = ""/>
-            <Key labels = "!enter" ratio = "1.5" icon = "enter.png"/>
+            <Key labels = "↵!enter" ratio = "1.5" icon = ""/>
         </Row>
     </Mode>
     <Mode id="ru">
