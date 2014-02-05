@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Keyboard
+    defaultKeyWidth="50"
+    defaultKeyHeight="50"
+    horizontalGap="2px"
+    verticalGap="2px">
+
+    <Mode id="eng">
+        <Row>
+            <Key labels = "q|1"/>
+            <Key labels = "w|2"/>
+            <Key labels = "e|3"/>
+            <Key labels = "r|4"/>
+            <Key labels = "t|5"/>
+            <Key labels = "y|6"/>
+            <Key labels = "u|7"/>
+            <Key labels = "i|8"/>
+            <Key labels = "o|9"/>
+            <Key labels = "p|0"/>
+        </Row>
+        <Row>
+            <Key labels = "a"/>
+            <Key labels = "s"/>
+            <Key labels = "d"/>
+            <Key labels = "f"/>
+            <Key labels = "g"/>
+            <Key labels = "h"/>
+            <Key labels = "j"/>
+            <Key labels = "k"/>
+            <Key labels = "l"/>
+        </Row>
+        <Row>
+            <Key labels = "!shift"/>
+            <Key labels = "z"/>
+            <Key labels = "x"/>
+            <Key labels = "c"/>
+            <Key labels = "v"/>
+            <Key labels = "b"/>
+            <Key labels = "n"/>
+            <Key labels = "m"/>
+            <Key labels = "!backspace"/>
+        </Row>
+        <Row>
+            <Key labels = "!num"/>
+            <Key labels = "!lang"/>
+            <Key labels = "!space"/>
+            <Key labels = ".|,!?:;@"/>
+            <Key labels = "!enter"/>
+        </Row>
+    </Mode>
+    <Mode id="rus">
+
+    </Mode>
+    <Mode id="num">
+
+    </Mode>
+</Keyboard>
