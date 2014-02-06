@@ -15,7 +15,7 @@ Item {
     property int xmlIndex: 1
 
     signal keyClicked(string key)
-    signal switchMode(string mode)
+    signal switchSource(string source)
 
     Text {
         id: proxyTextItem
@@ -40,7 +40,7 @@ Item {
 
             Row {
                 id: keyRow
-                anchors.horizontalCenter: parent.horizontalCenter
+                anchors.horizontalCenter: if(parent) parent.horizontalCenter
 
                 Repeater {
                     id: keyRepeater
@@ -71,8 +71,8 @@ Item {
 
                                 switch(commandList[0])
                                 {
-                                    case "mode":
-                                        root.switchMode(commandList[1])
+                                    case "source":
+                                        root.switchSource(commandList[1])
                                         return;
                                     default:
                                         return;

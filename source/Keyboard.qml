@@ -4,7 +4,7 @@ import QtQuick.XmlListModel 2.0
 Rectangle {
     id: root
 
-    property url source: "mobile-keyboard.xml"
+    property url source: "keyboard_us.xml"
     property int keyWidth: 75
     property int keyHeight: 100
     property alias font: keyboardItem.font
@@ -22,6 +22,7 @@ Rectangle {
         source: root.source
 
         onKeyClicked: console.log(key)
+        onSwitchSource: root.source = source
     }
 }
 
