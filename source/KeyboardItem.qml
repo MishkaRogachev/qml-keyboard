@@ -94,11 +94,17 @@ Item {
                                     default: return;
                                 }
                             }
-                            if(text.length === 1) root.keyClicked(text);
+                            if(text.length === 1) root.emitKeyClicked(text);
                         }
+
+                        onAlternatesClicked: root.emitKeyClicked(symbol);
                     }
                 }
             }
         }
+    }
+    function emitKeyClicked(text)
+    {
+        keyClicked( allUpperCase ? text.toUpperCase() : text);
     }
 }
