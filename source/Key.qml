@@ -6,12 +6,17 @@ Item {
     property alias text: textItem.text
     property alias font: textItem.font
     property alias iconSource: icon.source
+    property alias fontColor: textItem.color
+    property color keyColor
+    property color keyPressedColor
+
+    signal clicked()
 
     Rectangle {
-        id: background
-        color: "#FEFEFE"
+        id: backgroundItem
         anchors.fill: parent
         anchors.margins: 2
+        color: mouseArea.pressed ? keyPressedColor : keyColor;
     }
 
     Row {
@@ -26,5 +31,11 @@ Item {
             id: textItem
             anchors.verticalCenter: parent.verticalCenter
         }
+    }
+
+    MouseArea {
+        id: mouseArea
+        anchors.fill: parent
+        onClicked: root.clicked()
     }
 }

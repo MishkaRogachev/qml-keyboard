@@ -5,45 +5,23 @@ Rectangle {
     id: root
 
     property url source: "mobile-keyboard.xml"
-    property string currentMode: ""
     property int keyWidth: 75
     property int keyHeight: 100
-    property alias font: proxyTextItem.font
+    property alias font: keyboardItem.font
+    property alias fontColor: keyboardItem.fontColor
+    property alias keyColor: keyboardItem.keyColor
+    property alias keyPressedColor: keyboardItem.keyPressedColor
 
-    color: "#2C3E50"
+    color: "#192430"
     width: 1024
     height: 640
 
-    Text {
-        id: proxyTextItem
-        color: "#4D4D4D"
-        font.pointSize: 36
-        font.weight: Font.Light
-        font.family: "Roboto"
-        verticalAlignment: Text.AlignVCenter
-        horizontalAlignment: Text.AlignHCenter
-    }
+    KeyboardItem {
+        id: keyboardItem
+        anchors.centerIn: parent
+        source: root.source
 
-    Repeater {
-        id: keyboardModeRepeater
-
-        model: XmlListModel {
-            source: root.source
-            query: "/Keyboard/Mode"
-
-            XmlRole { name: "mode"; query: "@id/string()" }
-        }
-
-        KeyboardItem {
-            id: keyboardItem
-            anchors.centerIn: parent
-            source: root.source
-            Component.onCompleted: if (index === 0) currentMode=mode;
-            visible: mode === currentMode
-            keyWidth: root.keyWidth
-            keyHeight: root.keyHeight
-            font: proxyTextItem.font
-        }
+        onKeyClicked: console.log(key)
     }
 }
 
