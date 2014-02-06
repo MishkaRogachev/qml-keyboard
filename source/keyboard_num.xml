@@ -25,7 +25,7 @@
         <Key labels = ")" ratio = "1" icon = ""/>
     </Row>
     <Row>
-        <Key labels = "Alt!alt" ratio = "1" icon = ""/>
+        <Key labels = "⇄!tab" ratio = "1" icon = ""/>
         <Key labels = "=" ratio = "1" icon = ""/>
         <Key labels = "^" ratio = "1" icon = ""/>
         <Key labels = "," ratio = "1" icon = ""/>

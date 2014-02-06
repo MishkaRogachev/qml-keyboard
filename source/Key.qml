@@ -30,6 +30,7 @@ Item {
         Text {
             id: textItem
             anchors.verticalCenter: parent.verticalCenter
+
         }
     }
 

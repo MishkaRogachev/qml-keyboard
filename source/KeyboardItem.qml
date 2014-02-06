@@ -14,6 +14,8 @@ Item {
 
     property int xmlIndex: 1
 
+    property bool allUpperCase: false
+
     signal keyClicked(string key)
     signal switchSource(string source)
 
@@ -23,6 +25,8 @@ Item {
         font.pointSize: 36
         font.weight: Font.Light
         font.family: "Roboto"
+        font.capitalization: root.allUpperCase ? Font.AllUppercase :
+                                                 Font.MixedCase
         verticalAlignment: Text.AlignVCenter
         horizontalAlignment: Text.AlignHCenter
     }
@@ -74,6 +78,9 @@ Item {
                                     case "source":
                                         root.switchSource(commandList[1])
                                         return;
+                                    case "shift":
+                                        root.allUpperCase = !root.allUpperCase
+                                        return
                                     default:
                                         return;
                                 }
