@@ -10,6 +10,8 @@ Item {
     property color keyColor
     property color keyPressedColor
 
+    property string alternates: ""
+
     signal clicked()
 
     Rectangle {
@@ -30,7 +32,30 @@ Item {
         Text {
             id: textItem
             anchors.verticalCenter: parent.verticalCenter
+        }
+    }
 
+    Row {
+        id: alternatesRow
+        visible: false
+        anchors.bottom: backgroundItem.top
+        anchors.left: backgroundItem.left
+
+        Repeater {
+            model: alternates.length
+
+            Rectangle {
+                color: keyPressedColor
+                height: backgroundItem.height
+                width: backgroundItem.width
+
+                Text {
+                    anchors.centerIn: parent
+                    text: alternates[ index ]
+                    font: textItem.font
+                    color: textItem.color
+                }
+            }
         }
     }
 
@@ -38,5 +63,7 @@ Item {
         id: mouseArea
         anchors.fill: parent
         onClicked: root.clicked()
+        onPressAndHold: alternatesRow.visible = true
+        onReleased: alternatesRow.visible = false
     }
 }

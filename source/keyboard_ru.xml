@@ -43,7 +43,7 @@
         <Key labels = "123!source:keyboard_num.xml" ratio = "1.5" icon = ""/>
         <Key labels = "Ru!source:keyboard_us.xml" ratio = "1" icon = ""/>
         <Key labels = " " ratio = "5" icon = ""/>
-        <Key labels = ".|,!?:;@" ratio = "1" icon = ""/>
+        <Key labels = ".|,!?@" ratio = "1" icon = ""/>
         <Key labels = "↵!enter" ratio = "1.5" icon = ""/>
     </Row>
 </Keyboard>

@@ -58,17 +58,27 @@ Item {
                     }
 
                     Key {
+                        id: key
                         width: keyWidth * ratio
                         height: keyHeight
-                        text: labels.split(/[!|]+/)[0].toString();
                         iconSource: icon
                         font: proxyTextItem.font
                         fontColor: proxyTextItem.color
                         keyColor: root.keyColor
                         keyPressedColor: root.keyPressedColor
-                        onClicked: {
-                            var command = labels.split(/[!]+/)[1];
 
+                        property var command
+                        property var params: labels
+
+                        onParamsChanged: {
+                            var labelSplit = params.split(/[|]+/)
+
+                            text = params.split(/[!|]+/)[0].toString();
+                            if (labelSplit[1]) alternates = labelSplit[1];
+                            command = params.split(/[!]+/)[1];
+                        }
+
+                        onClicked: {
                             if (command)
                             {
                                 var commandList = command.split(":");
@@ -80,12 +90,10 @@ Item {
                                         return;
                                     case "shift":
                                         root.allUpperCase = !root.allUpperCase
-                                        return
-                                    default:
                                         return;
+                                    default: return;
                                 }
                             }
-
                             if(text.length === 1) root.keyClicked(text);
                         }
                     }
