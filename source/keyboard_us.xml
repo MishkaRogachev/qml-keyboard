@@ -22,6 +22,7 @@
         <Key labels = "j" ratio = "1" icon = ""/>
         <Key labels = "k" ratio = "1" icon = ""/>
         <Key labels = "l" ratio = "1" icon = ""/>
+        <Key labels = "[|]{}" ratio = "1" icon = ""/>
     </Row>
     <Row>
         <Key labels = "⇑!shift" ratio = "1.5" icon = ""/>
