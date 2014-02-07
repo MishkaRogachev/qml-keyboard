@@ -13,33 +13,33 @@
         <Key labels = "p|0" ratio = "1"/>
     </Row>
     <Row>
-        <Key labels = "a" ratio = "1"/>
-        <Key labels = "s" ratio = "1"/>
-        <Key labels = "d" ratio = "1"/>
-        <Key labels = "f" ratio = "1"/>
-        <Key labels = "g" ratio = "1"/>
-        <Key labels = "h" ratio = "1"/>
-        <Key labels = "j" ratio = "1"/>
-        <Key labels = "k" ratio = "1"/>
-        <Key labels = "l" ratio = "1"/>
-        <Key labels = "[|]{}" ratio = "1"/>
+        <Key labels = "a|%" ratio = "1"/>
+        <Key labels = "s|^" ratio = "1"/>
+        <Key labels = "d|*" ratio = "1"/>
+        <Key labels = "f|{" ratio = "1"/>
+        <Key labels = "g|}" ratio = "1"/>
+        <Key labels = "h|[" ratio = "1"/>
+        <Key labels = "j|]" ratio = "1"/>
+        <Key labels = "k|()" ratio = "1"/>
+        <Key labels = "l|&apos;&quot;" ratio = "1"/>
+        <Key labels = "/|?" ratio = "1"/>
     </Row>
     <Row>
         <Key labels = "⇑!shift" ratio = "1.5" checkable = "true"/>
-        <Key labels = "z" ratio = "1"/>
-        <Key labels = "x" ratio = "1"/>
-        <Key labels = "c" ratio = "1"/>
-        <Key labels = "v" ratio = "1"/>
-        <Key labels = "b" ratio = "1"/>
-        <Key labels = "n" ratio = "1"/>
-        <Key labels = "m" ratio = "1"/>
+        <Key labels = "z|@" ratio = "1"/>
+        <Key labels = "x|$" ratio = "1"/>
+        <Key labels = "c|!" ratio = "1"/>
+        <Key labels = "v|;" ratio = "1"/>
+        <Key labels = "b|:" ratio = "1"/>
+        <Key labels = "n|&lt;" ratio = "1"/>
+        <Key labels = "m|&gt;" ratio = "1"/>
         <Key labels = "⌫!backspace" ratio = "1.5"/>
     </Row>
     <Row>
         <Key labels = "123!source:keyboard_num.xml" ratio = "1.5"/>
         <Key labels = "Us!source:keyboard_ru.xml" ratio = "1"/>
-        <Key labels = " " ratio = "5"/>
-        <Key labels = ".|,!?@" ratio = "1"/>
+        <Key labels = " |" ratio = "5"/>
+        <Key labels = ".|," ratio = "1"/>
         <Key labels = "↵!enter" ratio = "1.5"/>
     </Row>
 </Keyboard>
