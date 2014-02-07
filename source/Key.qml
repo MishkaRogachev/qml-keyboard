@@ -7,8 +7,11 @@ Item {
     property alias font: textItem.font
     property alias iconSource: icon.source
     property alias fontColor: textItem.color
+    property int bounds: 0
     property color keyColor
     property color keyPressedColor
+    property bool isChekable: false
+    property bool isChecked: false
 
     property string alternates: ""
 
@@ -18,8 +21,8 @@ Item {
     Rectangle {
         id: backgroundItem
         anchors.fill: parent
-        anchors.margins: 2
-        color: mouseArea.pressed ? keyPressedColor : keyColor;
+        anchors.margins: root.bounds
+        color: isChecked || mouseArea.pressed ? keyPressedColor : keyColor;
     }
 
     Row {
@@ -67,13 +70,19 @@ Item {
     MouseArea {
         id: mouseArea
         anchors.fill: parent
-        onClicked: root.clicked()
         onPressAndHold: alternatesRow.visible = true
+        onClicked: {
+            if (isChekable) isChecked = !isChecked
+            root.clicked()
+        }
+
+
         onReleased: {
             alternatesRow.visible = false
             if (alternatesRow.selectedIndex > -1)
                 root.alternatesClicked(alternates[alternatesRow.selectedIndex])
         }
+
         onMouseXChanged: {
             alternatesRow.selectedIndex =
             (mouseY < 0 && mouseX > 0 && mouseY < alternatesRow.width) ?

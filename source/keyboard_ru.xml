@@ -1,49 +1,49 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Keyboard>
     <Row>
-        <Key labels = "й|1" ratio = "0.91" icon = ""/>
-        <Key labels = "ц|2" ratio = "0.91" icon = ""/>
-        <Key labels = "у|3" ratio = "0.91" icon = ""/>
-        <Key labels = "к|4" ratio = "0.91" icon = ""/>
-        <Key labels = "е|ё5" ratio = "0.91" icon = ""/>
-        <Key labels = "н|6" ratio = "0.91" icon = ""/>
-        <Key labels = "г|7" ratio = "0.91" icon = ""/>
-        <Key labels = "ш|8" ratio = "0.91" icon = ""/>
-        <Key labels = "щ|9" ratio = "0.91" icon = ""/>
-        <Key labels = "з|0" ratio = "0.91" icon = ""/>
-        <Key labels = "х"   ratio = "0.91" icon = ""/>
+        <Key labels = "й|1" ratio = "0.91"/>
+        <Key labels = "ц|2" ratio = "0.91"/>
+        <Key labels = "у|3" ratio = "0.91"/>
+        <Key labels = "к|4" ratio = "0.91"/>
+        <Key labels = "е|ё5" ratio = "0.91"/>
+        <Key labels = "н|6" ratio = "0.91"/>
+        <Key labels = "г|7" ratio = "0.91"/>
+        <Key labels = "ш|8" ratio = "0.91"/>
+        <Key labels = "щ|9" ratio = "0.91"/>
+        <Key labels = "з|0" ratio = "0.91"/>
+        <Key labels = "х"   ratio = "0.91"/>
     </Row>
     <Row>
-        <Key labels = "ф" ratio = "0.91" icon = ""/>
-        <Key labels = "ы" ratio = "0.91" icon = ""/>
-        <Key labels = "в" ratio = "0.91" icon = ""/>
-        <Key labels = "а" ratio = "0.91" icon = ""/>
-        <Key labels = "п" ratio = "0.91" icon = ""/>
-        <Key labels = "р" ratio = "0.91" icon = ""/>
-        <Key labels = "о" ratio = "0.91" icon = ""/>
-        <Key labels = "л" ratio = "0.91" icon = ""/>
-        <Key labels = "д" ratio = "0.91" icon = ""/>
-        <Key labels = "ж" ratio = "0.91" icon = ""/>
-        <Key labels = "э" ratio = "0.91" icon = ""/>
+        <Key labels = "ф" ratio = "0.91"/>
+        <Key labels = "ы" ratio = "0.91"/>
+        <Key labels = "в" ratio = "0.91"/>
+        <Key labels = "а" ratio = "0.91"/>
+        <Key labels = "п" ratio = "0.91"/>
+        <Key labels = "р" ratio = "0.91"/>
+        <Key labels = "о" ratio = "0.91"/>
+        <Key labels = "л" ratio = "0.91"/>
+        <Key labels = "д" ratio = "0.91"/>
+        <Key labels = "ж" ratio = "0.91"/>
+        <Key labels = "э" ratio = "0.91"/>
     </Row>
     <Row>
-        <Key labels = "⇑!shift" ratio = "0.91" icon = ""/>
-        <Key labels = "я" ratio = "0.91" icon = ""/>
-        <Key labels = "ч" ratio = "0.91" icon = ""/>
-        <Key labels = "с" ratio = "0.91" icon = ""/>
-        <Key labels = "м" ratio = "0.91" icon = ""/>
-        <Key labels = "и" ratio = "0.91" icon = ""/>
-        <Key labels = "т" ratio = "0.91" icon = ""/>
-        <Key labels = "ь|ъ" ratio = "0.91" icon = ""/>
-        <Key labels = "б" ratio = "0.91" icon = ""/>
-        <Key labels = "ю" ratio = "0.91" icon = ""/>
-        <Key labels = "⌫!backspace" ratio = "0.91" icon = ""/>
+        <Key labels = "⇑!shift" ratio = "0.91" checkable = "true"/>
+        <Key labels = "я" ratio = "0.91"/>
+        <Key labels = "ч" ratio = "0.91"/>
+        <Key labels = "с" ratio = "0.91"/>
+        <Key labels = "м" ratio = "0.91"/>
+        <Key labels = "и" ratio = "0.91"/>
+        <Key labels = "т" ratio = "0.91"/>
+        <Key labels = "ь|ъ" ratio = "0.91"/>
+        <Key labels = "б" ratio = "0.91"/>
+        <Key labels = "ю" ratio = "0.91"/>
+        <Key labels = "⌫!backspace" ratio = "0.91"/>
     </Row>
     <Row>
-        <Key labels = "123!source:keyboard_num.xml" ratio = "1.5" icon = ""/>
-        <Key labels = "Ru!source:keyboard_us.xml" ratio = "1" icon = ""/>
-        <Key labels = " " ratio = "5" icon = ""/>
-        <Key labels = ".|,!?@" ratio = "1" icon = ""/>
-        <Key labels = "↵!enter" ratio = "1.5" icon = ""/>
+        <Key labels = "123!source:keyboard_num.xml" ratio = "1.5"/>
+        <Key labels = "Ru!source:keyboard_us.xml" ratio = "1"/>
+        <Key labels = " " ratio = "5"/>
+        <Key labels = ".|,!?@" ratio = "1"/>
+        <Key labels = "↵!enter" ratio = "1.5"/>
     </Row>
 </Keyboard>

@@ -1,12 +1,13 @@
 import QtQuick 2.0
-import QtQuick.XmlListModel 2.0
 
 Rectangle {
     id: root
+    // TODO: inherit keyboardItem instead of agregation
 
-    property url source: "keyboard_us.xml"
-    property int keyWidth: 75
-    property int keyHeight: 100
+    property alias source: keyboardItem.source
+    property alias keyWidth: keyboardItem.keyWidth
+    property alias keyHeight: keyboardItem.keyHeight
+    property alias bounds: keyboardItem.bounds
     property alias font: keyboardItem.font
     property alias fontColor: keyboardItem.fontColor
     property alias keyColor: keyboardItem.keyColor
@@ -19,7 +20,7 @@ Rectangle {
     KeyboardItem {
         id: keyboardItem
         anchors.centerIn: parent
-        source: root.source
+        source: "keyboard_us.xml"
 
         onKeyClicked: console.log(key)
         onSwitchSource: root.source = source

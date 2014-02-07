@@ -7,6 +7,7 @@ Item {
     property string source
     property int keyWidth: 75
     property int keyHeight: 100
+    property int bounds: 2
     property alias font: proxyTextItem.font
     property alias fontColor: proxyTextItem.color
     property color keyColor: "#34495E"
@@ -18,6 +19,9 @@ Item {
 
     signal keyClicked(string key)
     signal switchSource(string source)
+    signal backspaceClicked()
+    signal enterClicked()
+    signal tabClicked()
 
     Text {
         id: proxyTextItem
@@ -55,6 +59,7 @@ Item {
                         XmlRole { name: "labels"; query: "@labels/string()" }
                         XmlRole { name: "ratio"; query: "@ratio/number()" }
                         XmlRole { name: "icon"; query: "@icon/string()" }
+                        XmlRole { name: "checkable"; query: "@checkable/string()" }
                     }
 
                     Key {
@@ -66,6 +71,8 @@ Item {
                         fontColor: proxyTextItem.color
                         keyColor: root.keyColor
                         keyPressedColor: root.keyPressedColor
+                        bounds: root.bounds
+                        isChekable: checkable
 
                         property var command
                         property var params: labels
@@ -91,6 +98,15 @@ Item {
                                     case "shift":
                                         root.allUpperCase = !root.allUpperCase
                                         return;
+                                    case "backspace": //TODO: it is better to use special keys
+                                        root.backspaceClicked()
+                                        return;
+                                    case "enter":
+                                        root.enterClicked()
+                                        return;
+                                    case "tab":
+                                        root.tabClicked();
+                                        return;
                                     default: return;
                                 }
                             }
@@ -103,8 +119,8 @@ Item {
             }
         }
     }
-    function emitKeyClicked(text)
-    {
+
+    function emitKeyClicked(text) {
         keyClicked( allUpperCase ? text.toUpperCase() : text);
     }
 }
