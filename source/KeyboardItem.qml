@@ -19,9 +19,7 @@ Item {
 
     signal keyClicked(string key)
     signal switchSource(string source)
-    signal backspaceClicked()
     signal enterClicked()
-    signal tabClicked()
 
     Text {
         id: proxyTextItem
@@ -102,21 +100,20 @@ Item {
                                     case "shift":
                                         root.allUpperCase = !root.allUpperCase
                                         return;
-                                    case "backspace": //TODO: it is better to use special keys
-                                        root.backspaceClicked()
+                                    case "backspace":
+                                        root.keyClicked('\b');
                                         return;
                                     case "enter":
                                         root.enterClicked()
                                         return;
                                     case "tab":
-                                        root.tabClicked();
+                                        root.keyClicked('\t');
                                         return;
                                     default: return;
                                 }
                             }
                             if(text.length === 1) root.emitKeyClicked(text);
                         }
-
                         onAlternatesClicked: root.emitKeyClicked(symbol);
                     }
                 }

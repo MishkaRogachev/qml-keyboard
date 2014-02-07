@@ -11,39 +11,39 @@
         <Key labels = "ш|8" ratio = "0.91"/>
         <Key labels = "щ|9" ratio = "0.91"/>
         <Key labels = "з|0" ratio = "0.91"/>
-        <Key labels = "х"   ratio = "0.91"/>
+        <Key labels = "х|-_"   ratio = "0.91"/>
     </Row>
     <Row>
-        <Key labels = "ф" ratio = "0.91"/>
-        <Key labels = "ы" ratio = "0.91"/>
-        <Key labels = "в" ratio = "0.91"/>
-        <Key labels = "а" ratio = "0.91"/>
-        <Key labels = "п" ratio = "0.91"/>
-        <Key labels = "р" ratio = "0.91"/>
-        <Key labels = "о" ratio = "0.91"/>
-        <Key labels = "л" ratio = "0.91"/>
-        <Key labels = "д" ratio = "0.91"/>
-        <Key labels = "ж" ratio = "0.91"/>
-        <Key labels = "э" ratio = "0.91"/>
+        <Key labels = "ф|%`~" ratio = "0.91"/>
+        <Key labels = "ы|^|" ratio = "0.91"/>
+        <Key labels = "в|*\" ratio = "0.91"/>
+        <Key labels = "а|{" ratio = "0.91"/>
+        <Key labels = "п|}" ratio = "0.91"/>
+        <Key labels = "р|[" ratio = "0.91"/>
+        <Key labels = "о|]" ratio = "0.91"/>
+        <Key labels = "л|()" ratio = "0.91"/>
+        <Key labels = "д|&apos;&quot;" ratio = "0.91"/>
+        <Key labels = "ж|/" ratio = "0.91"/>
+        <Key labels = "э|?" ratio = "0.91"/>
     </Row>
     <Row>
         <Key labels = "⇑!shift" ratio = "0.91" checkable = "true"/>
-        <Key labels = "я" ratio = "0.91"/>
-        <Key labels = "ч" ratio = "0.91"/>
-        <Key labels = "с" ratio = "0.91"/>
-        <Key labels = "м" ratio = "0.91"/>
-        <Key labels = "и" ratio = "0.91"/>
-        <Key labels = "т" ratio = "0.91"/>
+        <Key labels = "я|@" ratio = "0.91"/>
+        <Key labels = "ч|$" ratio = "0.91"/>
+        <Key labels = "с|!" ratio = "0.91"/>
+        <Key labels = "м|;" ratio = "0.91"/>
+        <Key labels = "и|:" ratio = "0.91"/>
+        <Key labels = "т|=+" ratio = "0.91"/>
         <Key labels = "ь|ъ" ratio = "0.91"/>
-        <Key labels = "б" ratio = "0.91"/>
-        <Key labels = "ю" ratio = "0.91"/>
+        <Key labels = "б|&lt;" ratio = "0.91"/>
+        <Key labels = "ю|&gt;" ratio = "0.91"/>
         <Key labels = "⌫!backspace" ratio = "0.91"/>
     </Row>
     <Row>
         <Key labels = "123!source:keyboard_num.xml" ratio = "1.5"/>
         <Key labels = "Ru!source:keyboard_us.xml" ratio = "1"/>
         <Key labels = " " ratio = "5"/>
-        <Key labels = ".|,!?@" ratio = "1"/>
+        <Key labels = ".|," ratio = "1"/>
         <Key labels = "↵!enter" ratio = "1.5"/>
     </Row>
 </Keyboard>

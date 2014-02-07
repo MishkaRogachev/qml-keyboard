@@ -13,13 +13,13 @@
         <Key labels = "p|0" ratio = "1"/>
     </Row>
     <Row>
-        <Key labels = "a|%" ratio = "1"/>
-        <Key labels = "s|^" ratio = "1"/>
-        <Key labels = "d|*" ratio = "1"/>
-        <Key labels = "f|{" ratio = "1"/>
-        <Key labels = "g|}" ratio = "1"/>
-        <Key labels = "h|[" ratio = "1"/>
-        <Key labels = "j|]" ratio = "1"/>
+        <Key labels = "a|%`~" ratio = "1"/>
+        <Key labels = "s|^|" ratio = "1"/>
+        <Key labels = "d|*\" ratio = "1"/>
+        <Key labels = "f|{+" ratio = "1"/>
+        <Key labels = "g|}-" ratio = "1"/>
+        <Key labels = "h|[=" ratio = "1"/>
+        <Key labels = "j|]_" ratio = "1"/>
         <Key labels = "k|()" ratio = "1"/>
         <Key labels = "l|&apos;&quot;" ratio = "1"/>
         <Key labels = "/|?" ratio = "1"/>
