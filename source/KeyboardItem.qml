@@ -73,6 +73,10 @@ Item {
                         keyPressedColor: root.keyPressedColor
                         bounds: root.bounds
                         isChekable: checkable
+                        isChecked: isChekable &&
+                                   command &&
+                                   command === "shift" &&
+                                   allUpperCase
 
                         property var command
                         property var params: labels
