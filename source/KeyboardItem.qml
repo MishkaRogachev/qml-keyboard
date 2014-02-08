@@ -8,8 +8,10 @@ Item {
     property int keyWidth: 75
     property int keyHeight: 100
     property int bounds: 2
-    property alias font: proxyTextItem.font
-    property alias fontColor: proxyTextItem.color
+    property alias mainFont: proxyMainTextItem.font
+    property alias mainFontColor: proxyMainTextItem.color
+    property alias secondaryFont: proxySecondaryTextItem.font
+    property alias secondaryFontColor: proxySecondaryTextItem.color
     property color keyColor: "#34495E"
     property color keyPressedColor: "#1ABC9C"
 
@@ -22,9 +24,21 @@ Item {
     signal enterClicked()
 
     Text {
-        id: proxyTextItem
+        id: proxyMainTextItem
         color: "#F2F2F2"
         font.pointSize: 36
+        font.weight: Font.Light
+        font.family: "Roboto"
+        font.capitalization: root.allUpperCase ? Font.AllUppercase :
+                                                 Font.MixedCase
+        verticalAlignment: Text.AlignVCenter
+        horizontalAlignment: Text.AlignHCenter
+    }
+
+    Text {
+        id: proxySecondaryTextItem
+        color: "#95A5A6"
+        font.pointSize: 18
         font.weight: Font.Light
         font.family: "Roboto"
         font.capitalization: root.allUpperCase ? Font.AllUppercase :
@@ -65,8 +79,10 @@ Item {
                         width: keyWidth * ratio
                         height: keyHeight
                         iconSource: icon
-                        font: proxyTextItem.font
-                        fontColor: proxyTextItem.color
+                        mainFont: proxyMainTextItem.font
+                        mainFontColor: proxyMainTextItem.color
+                        secondaryFont: proxySecondaryTextItem.font
+                        secondaryFontColor: proxySecondaryTextItem.color
                         keyColor: root.keyColor
                         keyPressedColor: root.keyPressedColor
                         bounds: root.bounds
@@ -82,8 +98,8 @@ Item {
                         onParamsChanged: {
                             var labelSplit = params.split(/[|]+/)
 
-                            text = params.split(/[!|]+/)[0].toString();
-                            if (labelSplit[1]) alternates = labelSplit[1];
+                            mainLabel = params.split(/[!|]+/)[0].toString();
+                            if (labelSplit[1]) secondaryLabels = labelSplit[1];
                             command = params.split(/[!]+/)[1];
                         }
 
@@ -112,7 +128,8 @@ Item {
                                     default: return;
                                 }
                             }
-                            if(text.length === 1) root.emitKeyClicked(text);
+                            if (mainLabel.length === 1)
+                                root.emitKeyClicked(mainLabel);
                         }
                         onAlternatesClicked: root.emitKeyClicked(symbol);
                     }

@@ -3,17 +3,22 @@ import QtQuick 2.0
 Item {
     id: root
 
-    property alias text: textItem.text
-    property alias font: textItem.font
+    property alias mainLabel: mainLabelItem.text
+    property alias secondaryLabels: secondaryLabelsItem.text
     property alias iconSource: icon.source
-    property alias fontColor: textItem.color
-    property int bounds: 0
-    property color keyColor
-    property color keyPressedColor
+
     property bool isChekable: false
     property bool isChecked: false
 
-    property string alternates: ""
+    property int bounds: 2
+
+    property alias mainFont: mainLabelItem.font
+    property alias secondaryFont: secondaryLabelsItem.font
+    property alias mainFontColor: mainLabelItem.color
+    property alias secondaryFontColor: secondaryLabelsItem.color
+
+    property color keyColor: "gray"
+    property color keyPressedColor: "white"
 
     signal clicked()
     signal alternatesClicked(string symbol)
@@ -25,19 +30,30 @@ Item {
         color: isChecked || mouseArea.pressed ? keyPressedColor : keyColor;
     }
 
-    Row {
-        anchors.centerIn: parent
-
-        Image {
-            id: icon
-            smooth: true
-            anchors.verticalCenter: parent.verticalCenter
-        }
+    Column
+    {
+        anchors.centerIn: backgroundItem
 
         Text {
-            id: textItem
+            id: secondaryLabelsItem
             smooth: true
-            anchors.verticalCenter: parent.verticalCenter
+            anchors.right: parent.right
+        }
+
+        Row {
+            anchors.horizontalCenter: parent.horizontalCenter
+
+            Image {
+                id: icon
+                smooth: true
+                anchors.verticalCenter: parent.verticalCenter
+            }
+
+            Text {
+                id: mainLabelItem
+                smooth: true
+                anchors.verticalCenter: parent.verticalCenter
+            }
         }
     }
 
@@ -49,19 +65,19 @@ Item {
         anchors.left: backgroundItem.left
 
         Repeater {
-            model: alternates.length
+            model: secondaryLabels.length
 
             Rectangle {
                 property bool isSelected: alternatesRow.selectedIndex == index
-                color: isSelected ? textItem.color : keyPressedColor
+                color: isSelected ? mainLabelItem.color : keyPressedColor
                 height: backgroundItem.height
                 width: backgroundItem.width
 
                 Text {
                     anchors.centerIn: parent
-                    text: alternates[ index ]
-                    font: textItem.font
-                    color: isSelected ? keyPressedColor : textItem.color
+                    text: secondaryLabels[ index ]
+                    font: mainLabelItem.font
+                    color: isSelected ? keyPressedColor : mainLabelItem.color
                 }
             }
         }
@@ -76,11 +92,10 @@ Item {
             root.clicked()
         }
 
-
         onReleased: {
             alternatesRow.visible = false
             if (alternatesRow.selectedIndex > -1)
-                root.alternatesClicked(alternates[alternatesRow.selectedIndex])
+                root.alternatesClicked(secondaryLabels[alternatesRow.selectedIndex])
         }
 
         onMouseXChanged: {

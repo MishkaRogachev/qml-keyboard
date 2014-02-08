@@ -8,8 +8,10 @@ Rectangle {
     property alias keyWidth: keyboardItem.keyWidth
     property alias keyHeight: keyboardItem.keyHeight
     property alias bounds: keyboardItem.bounds
-    property alias font: keyboardItem.font
-    property alias fontColor: keyboardItem.fontColor
+    property alias mainFont: keyboardItem.mainFont
+    property alias mainFontColor: keyboardItem.mainFontColor
+    property alias secondaryFont: keyboardItem.secondaryFont
+    property alias secondaryFontColor: keyboardItem.secondaryFontColor
     property alias keyColor: keyboardItem.keyColor
     property alias keyPressedColor: keyboardItem.keyPressedColor
 
