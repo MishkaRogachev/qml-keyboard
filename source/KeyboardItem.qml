@@ -60,13 +60,15 @@ Item {
 
             Row {
                 id: keyRow
+                property int rowIndex: index
                 anchors.horizontalCenter: if(parent) parent.horizontalCenter
 
                 Repeater {
                     id: keyRepeater
+                    
                     model: XmlListModel {
                         source: root.source
-                        query: "/Keyboard/Row[" + (index + 1) + "]/Key"
+                        query: "/Keyboard/Row[" + (rowIndex + 1) + "]/Key"
 
                         XmlRole { name: "labels"; query: "@labels/string()" }
                         XmlRole { name: "ratio"; query: "@ratio/number()" }
